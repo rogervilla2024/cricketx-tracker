@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --cricket-primary: #16a34a;
+  --cricket-secondary: #15803d;
+  --cricket-accent: #fbbf24;
+}
+
+body {
+  @apply bg-cricket-darker text-slate-100 antialiased;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Gradient text for branding */
+.gradient-text {
+  @apply bg-gradient-to-r from-green-400 via-emerald-400 to-yellow-400 bg-clip-text text-transparent;
+}
+
+/* Card styling */
+.card {
+  @apply bg-slate-800/50 backdrop-blur-sm rounded-xl p-4 border border-slate-700/50;
+}
+
+/* Cricket pitch pattern background */
+.pitch-pattern {
+  background: linear-gradient(90deg, #166534 0%, #15803d 50%, #166534 100%);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-slate-800;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-600 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-slate-500;
+}
+
+/* Hide scrollbar but keep functionality */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Screen reader only */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Cricket-specific animations */
+@keyframes bat-swing {
+  0%, 100% {
+    transform: rotate(-15deg);
+  }
+  50% {
+    transform: rotate(45deg);
+  }
+}
+
+@keyframes ball-spin {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(180deg);
+  }
+}
+
+.animate-bat {
+  animation: bat-swing 2s ease-in-out infinite;
+}
+
+.animate-ball {
+  animation: ball-spin 1.5s ease-in-out infinite;
+}
+
+/* Multiplier colors - Cricket terminology */
+.mult-out { @apply text-red-500; }           /* Out - instant crash */
+.mult-single { @apply text-orange-400; }      /* Single - 1.x */
+.mult-double { @apply text-yellow-400; }      /* Double - 2.x */
+.mult-boundary { @apply text-lime-400; }      /* Boundary - 3-4x */
+.mult-four { @apply text-green-400; }         /* Four - 4-5x */
+.mult-six { @apply text-teal-400; }           /* Six - 6-10x */
+.mult-fifty { @apply text-blue-400; }         /* Fifty - 50x+ */
+.mult-century { @apply text-purple-400; }     /* Century - 100x+ */
+.mult-double-century { @apply text-pink-400; } /* Double Century - 200x+ */
