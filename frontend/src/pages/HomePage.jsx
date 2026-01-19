@@ -149,6 +149,27 @@ function HomePage({ rounds, summary, distribution, recentRounds, loading, refetc
               </div>
             </section>
 
+            {/* About Game Section */}
+            <section className="mb-6">
+              <div className="card">
+                <h2 className="text-xl font-bold mb-4 flex items-center gap-2">
+                  <span>&#127951;</span>
+                  What is Cricket X?
+                </h2>
+                <div className="prose prose-invert prose-sm max-w-none text-slate-300 space-y-4">
+                  <p>Cricket X is SmartSoft Gaming's innovative cricket-themed crash game, launched in 2022 to capture the massive cricket betting market in India, Pakistan, Bangladesh, and the UK. The game combines the thrilling mechanics of crash betting with cricket's beloved batting imagery, where players watch a batsman score runs as the multiplier climbs higher.</p>
+                  <p>Designed specifically for cricket enthusiasts, Cricket X features a unique 3-bet system that mirrors cricket's strategic depth. Players can place three simultaneous wagers per round - one conservative bet for singles, another for boundaries at medium multipliers, and a third aggressive bet chasing century-level returns above 100x. This multi-layered approach appeals to both casual fans and serious strategists.</p>
+                  <p>With a 97% RTP matching industry leaders like Aviator, Cricket X offers fair odds while maintaining excitement. The game peaks during major cricket events like the IPL, World Cup, and Ashes, when cricket fans worldwide seek additional engagement with the sport they love. SmartSoft's provably fair system ensures each outcome is verifiable and random.</p>
+                  <p>Important reminder: Cricket X is a game of chance, not skill. No amount of cricket knowledge affects the random outcome. The multiplier is determined by a certified RNG, making past results irrelevant to future rounds. Always set limits and play responsibly.</p>
+                </div>
+                <div className="mt-4 pt-4 border-t border-slate-700/50 flex flex-wrap gap-2">
+                  <span className="px-3 py-1 bg-slate-700/50 rounded-full text-xs text-slate-400">RTP: 97%</span>
+                  <span className="px-3 py-1 bg-slate-700/50 rounded-full text-xs text-slate-400">Provider: SmartSoft</span>
+                  <span className="px-3 py-1 bg-slate-700/50 rounded-full text-xs text-slate-400">Max: 10,000x</span>
+                </div>
+              </div>
+            </section>
+
             {/* 3-Bet Feature Highlight */}
             <section className="mb-6">
               <div className="card bg-gradient-to-r from-green-900/30 to-emerald-900/30 border-green-500/30">
